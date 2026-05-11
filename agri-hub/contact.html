@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Agri-Hub is a web platform that serves as a digital resource for farmers, providing guides, crop data and pest management strategies.">
+  <meta name="keywords" content="agriculture, information, agrihub, hub">
+  <title>Contact Us | Agriculture Information Hub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-success sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Agri-Hub</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="guide.html"> Farming Guide</a></li>
+          <li class="nav-item"><a class="nav-link" href="detail.html">Crop Details</a></li>
+          <li class="nav-item"><a class="nav-link" href="pest.html">Pest Control</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Page -->
+  <div class="container mt-5">
+    <section>
+      <div class="container">
+        <div class="row g-4 mb-4">
+          
+          <!-- Contact Info -->
+          <div class="card col-12 col-lg-6">
+            <h3 class="mt-3">Contact Info</h3>
+            <div class="p-4">
+              <div class="mb-2">
+                <h4>Coordinator</h4>
+                <p>sheikh Mujibur Rahman</p>
+              </div>
+              <div class="mb-2">
+                <h4>Location</h4>
+                <p>A108 Adam Street</p>
+                <p>New York, NY 535022</p>
+              </div>
+              <div class="mb-2">
+                <h4>Phone Number</h4>
+                <p>+1 5589 55488 55</p>
+                <p>+1 6678 254445 41</p>
+              </div>
+              <div class="mb-2">
+                <h4>Email Address</h4>
+                <p>info@example.com</p>
+                <p>contact@example.com</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <div class="card form-group col-12 col-lg-6">
+            <h3 class="mt-3 mb-2">Get in Touch</h3>
+
+            <input type="text" id="name" class="form-control mb-3" placeholder="Your Name">
+            <input type="email" id="email" class="form-control mb-3" placeholder="Your E-mail">
+            <input type="text" id="subject" class="form-control mb-3" placeholder="Subject">
+            <input type="number" id="mobile" class="form-control mb-3" placeholder="Mobile Number">
+            <textarea id="message" class="form-control mb-3" rows="7" placeholder="Message"></textarea>
+
+            <button type="submit" id="submitBtn" class="btn bg-success text-white mb-4 w-100 w-md-auto">
+              Send Message
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Map -->
+        <div class="ratio ratio-16x9">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29186.916621748376!2d90.35768831776814!3d23.87668742256586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c5d05e7074dd%3A0xd1c58803049f00c7!2sUttara%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1777284376362!5m2!1sen!2sbd"
+            style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer container-fluid">
+    <hr>
+    <p class="text-center small mb-0">&copy Agriculture Hub 2026. All rights are reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<script>
+  document.getElementById("submitBtn").addEventListener("click", function (e) {
+
+    let name = document.getElementById("name");
+    let email = document.getElementById("email");
+    let subject = document.getElementById("subject");
+    let mobile = document.getElementById("mobile");
+    let message = document.getElementById("message");
+
+    let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    let mobilePattern = /^[0-9]{11}$/;
+
+    if (name.value.trim() === "") {
+      alert("Please enter your name");
+      name.focus();
+      return false;
+    }
+
+    if (!email.value.match(emailPattern)) {
+      alert("Enter valid email address");
+      email.focus();
+      return false;
+    }
+
+    if (subject.value.trim() === "") {
+      alert("Please enter subject");
+      subject.focus();
+      return false;
+    }
+
+    if (!mobile.value.match(mobilePattern)) {
+      alert("Enter valid 11 digit mobile number");
+      mobile.focus();
+      return false;
+    }
+
+    if (message.value.trim() === "") {
+      alert("Please enter message");
+      message.focus();
+      return false;
+    }
+
+    alert("Form submitted successfully!");
+  });
+</script>
+
+</html>

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Afif Ahnaf | Creative Web Developer specializing in JavaScript, React, and responsive design. View my latest projects, technical skills, and case studies here.">
+    <meta name="keywords"
+        content="Afif Ahnaf, web developer portfolio, front end developer, reactjs developer, custom website design, responsive web design, javascript developer, web development services, frontend expert, software engineer portfolio, modern web applications">
+    <title>Contact | Afif Ahnaf</title>
+    <link rel="shortcut icon" href="img/favicon.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Afif Ahnaf</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Me -->
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Contact Me</h2>
+        <div class="d-flex flex-column flex-md-row gap-4">
+            <div class="card w-100">
+                <div class="card-body">
+                    <h5 class="card-title text-primary">Address</h5>
+                    <p class="card-text">311, Tuba Jamilla, Sangrami Sarani, Moddho Azampur, Dhaka</p>
+                    <h5 class="card-title text-primary">Phone Number</h5>
+                    <p class="card-text">+880 1521-742608 <br>+880 1621-965886</p>
+                    <h5 class="card-title text-primary">Email</h5>
+                    <p class="card-text">golamafifahnaf@gmail.com</p>
+                    <div class="ratio ratio-16x9">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d139500.8122823826!2d90.33728801744914!3d23.7809757283424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b087026b81%3A0x8fa563bbdd5904c2!2sDhaka!5e1!3m2!1sen!2sbd!4v1777878264993!5m2!1sen!2sbd"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="card w-100">
+                <form id="form" class="card-body">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Name</label>
+                        <input id="name" type="text" class="form-control" id="exampleFormControlInput1"
+                            placeholder="John Doe">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <input id="email" type="email" class="form-control" id="exampleFormControlInput1"
+                            placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Phone</label>
+                        <input id="phone" type="tel" class="form-control" id="exampleFormControlInput1"
+                            placeholder="017xxxxxxxx">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Address</label>
+                        <input id="address" type="text" class="form-control" id="exampleFormControlInput1"
+                            placeholder="Dhaka, Bangladesh">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                        <textarea id="msg" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <div class="text-end"><button id="submit" class="btn btn-primary" type="submit">Send Message</button></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark py-3 mt-auto">
+        <div class="container">
+            <p id="datetime" class="text-center text-muted small m-0"></p>
+            <hr class="text-center text-muted m-1">
+            <p class="text-center text-muted small m-0">&copy; Afif ahnaf 2026. All rights asre reserved!</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+
+<script src="js/script.js"></script>
+
+</html>
