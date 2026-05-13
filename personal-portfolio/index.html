@@ -17,7 +17,7 @@
 
 <body class="d-flex flex-column min-vh-100">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">Afif Ahnaf</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -46,39 +46,29 @@
         </div>
     </nav>
 
-    <!-- Carousel -->
-    <section class="mb-5">
-        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="5000">
-                    <img src="img/slider-1.webp" class="d-block img-fluid w-100" style="height: 400px;" alt="...">
-                    <div class="carousel-caption rounded p-2 opacity-75 bg-dark">
-                        <h4>Web Developer</h4>
-                    </div>
+    <!-- Hero Carousel -->
+    <section class="position-relative overflow-hidden mb-5">
+        <!-- Carousel Images -->
+        <div id="carouselExampleInterval" class="carousel slide h-100" data-bs-ride="carousel">
+            <div class="carousel-inner h-100">
+                <div class="carousel-item active h-100" data-bs-interval="3500">
+                    <img src="img/slider1.jpg" class="d-block w-100 hero-carousel-image" alt="">
                 </div>
-                <div class="carousel-item" data-bs-interval="5000">
-                    <img src="img/slider-2.webp" class="d-block img-fluid w-100" style="height: 400px;" alt="...">
-                    <div class="carousel-caption rounded p-2 opacity-75 bg-dark">
-                        <h4>Software Engineer</h4>
-                    </div>
+                <div class="carousel-item h-100" data-bs-interval="4000">
+                    <img src="img/slider2.jpg" class="d-block w-100 hero-carousel-image" alt="">
                 </div>
-                <div class="carousel-item">
-                    <img src="img/slider-3.webp" class="d-block img-fluid w-100" style="height: 400px;" alt="...">
-                    <div class="carousel-caption rounded p-2 opacity-75 bg-dark">
-                        <h4>UI/UX Designer</h4>
-                    </div>
+                <div class="carousel-item h-100" data-bs-interval="5000">
+                    <img src="img/slider3.jpg" class="d-block w-100 hero-carousel-image" alt="">
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+        </div>
+        <!-- Dark Overlay -->
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+        <!-- Fixed Content -->
+        <div class="position-absolute top-50 start-50 translate-middle text-center text-white w-100 px-3">
+            <h1 class="display-3 fw-bold mb-3">Hi, I'm Afif Ahnaf</h1>
+            <h3 class="fw-light mb-3">A passionate <span id="typing-text" class="fw-bold"></span></h3>
+            <a href="#about" class="btn btn-dark fw-bold">Explore</a>
         </div>
     </section>
 
@@ -105,35 +95,62 @@
     </section>
 
     <!-- About Me -->
-    <section class="container mb-5">
-        <h2 class="text-center mb-4">Who Am I?</h2>
+    <section id="about" class="container mb-5">
+        <h2 class="text-center fw-bold mb-4">Who Am I?</h2>
         <div class="text-center">
-            <img class="rounded-circle img-fluid mb-4" src="img/person.jpg" style="width: 240px;" alt="">
-            <h5 class="text-primary">Hi, I'm Afif Ahnaf</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat autem numquam molestiae aliquam
-                blanditiis ab debitis voluptatem in voluptatibus iusto repudiandae velit aperiam cupiditate ipsa
-                sapiente quisquam, minima quaerat nostrum!
-                Deserunt, iure eos aliquid ipsam eaque ipsa reiciendis autem ut soluta, debitis natus facere repellat
-                ullam excepturi adipisci assumenda tempora inventore doloremque eligendi exercitationem dolor saepe
-                quas. Architecto, facere incidunt.</p>
+            <img class="rounded-5 shadow img-fluid mb-4" src="img/person.jpg" style="width: 300px;" alt="">
+            <p class="text-secondary mb-4">
+                I am a passionate Software Engineer and Web Developer
+                with experience in building responsive, user-focused,
+                and modern web applications. I specialize in frontend
+                development and enjoy transforming ideas into clean, functional,
+                and visually appealing digital experiences.
+                Over the years, I have worked on multiple academic and
+                personal projects involving web technologies, UI/UX design,
+                and problem solving. I am constantly exploring new
+                technologies and improving my development workflow to
+                create scalable and efficient solutions.
+            </p>
         </div>
     </section>
 
     <!-- Mission & Vission -->
     <section class="container mb-5">
-        <div class="d-flex flex-column flex-sm-row gap-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title text-primary text-center">Mission</h5>
-                    <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
-                        rerum placeat dignissimos deleniti.</p>
+        <div class="row g-4">
+            <!-- Mission -->
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body p-4 text-center">
+                        <h3 class="text-primary fw-bold mb-3">Mission</h3>
+                        <p class="card-text text-secondary mb-0">
+                            My mission is to build modern, responsive,
+                            and user-friendly digital solutions that
+                            combine clean design with efficient
+                            functionality. I aim to continuously improve
+                            my skills in software engineering, problem
+                            solving, and web technologies while creating
+                            impactful projects that deliver meaningful
+                            user experiences.
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title text-primary text-center">Vision</h5>
-                    <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
-                        rerum placeat dignissimos deleniti.</p>
+
+            <!-- Vision -->
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body p-4 text-center">
+                        <h3 class="text-primary fw-bold mb-3">Vision</h3>
+                        <p class="card-text text-secondary mb-0">
+                            My vision is to become a skilled Software
+                            Engineer capable of developing scalable and
+                            innovative technologies that solve real-world
+                            problems. I aspire to contribute to the tech
+                            industry through continuous learning,
+                            creativity, and a passion for building
+                            high-quality digital products.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -141,32 +158,37 @@
 
     <!-- Featured Services -->
     <section class="container mb-5">
-        <h2 class="text-center mb-4">Featured Services</h2>
+        <h2 class="text-center fw-bold mb-4">Featured Services</h2>
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col">
-                <div class="card h-100">
+                <div class="card shadow-sm border-0 h-100">
                     <div class="card-body text-center">
                         <h5 class="card-title text-primary">Web Development</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
-                            rerum placeat dignissimos deleniti.</p>
+                        <p class="card-text">Building responsive, modern, and user-friendly
+                            websites and web applications using modern
+                            frontend and backend technologies.</p>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card h-100">
-                    <div class="card-body text-center">
-                        <h5 class="card-title text-primary">UI/UX Design</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
-                            rerum placeat dignissimos deleniti.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
+                <div class="card shadow-sm border-0 h-100">
                     <div class="card-body text-center">
                         <h5 class="card-title text-primary">Cyber Security</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
-                            rerum placeat dignissimos deleniti.</p>
+                        <p class="card-text">Exploring cybersecurity concepts, digital
+                            safety practices, and secure development
+                            approaches to build safer and more reliable
+                            digital systems.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm border-0 h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-primary">UI/UX Design</h5>
+                        <p class="card-text">Designing clean, visually appealing, and
+                            user-focused interfaces that improve user
+                            experience and create engaging digital
+                            interactions.</p>
                     </div>
                 </div>
             </div>
@@ -179,41 +201,44 @@
 
     <!-- Client Feedback -->
     <Section class="container mb-5">
-        <h2 class="text-center mb-4">Client Feedback</h2>
+        <h2 class="text-center fw-bold mb-4">Client Feedback</h2>
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col">
-                <div class="card h-100">
+                <div class="card shadow-sm border-0 h-100">
                     <div class="card-body">
-                        <p class="card-text" style="font-style: italic;">"Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Dolores sequi magni
-                            esse consequatur"</p>
+                        <p class="card-text" style="font-style: italic;">“Afif delivered a clean and responsive website with strong attention to detail. His communication,
+                            problem-solving ability, and dedication throughout the project made the entire development
+                            process smooth and professional.”</p>
                         <hr>
-                        <p class="card-text text-primary mb-0">John Doe</p>
-                        <p class="card-text small text-muted" style="font-style: italic;">CEO, Amazon</p>
+                        <p class="card-text text-primary mb-0">Daniel Carter</p>
+                        <p class="card-text small text-muted" style="font-style: italic;">CEO, BrightEdgeTech
+                        </p>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card h-100">
+                <div class="card shadow-sm border-0 h-100">
                     <div class="card-body">
-                        <p class="card-text" style="font-style: italic;">"Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Dolores sequi magni
-                            esse consequatur"</p>
+                        <p class="card-text" style="font-style: italic;">“Afif created a modern and user-friendly
+                            website that perfectly matched our project requirements. His frontend development skills,
+                            creative thinking, and consistent communication helped deliver an excellent final product on
+                            time.”</p>
                         <hr>
-                        <p class="card-text text-primary mb-0">John Doe</p>
-                        <p class="card-text small text-muted" style="font-style: italic;">CEO, IBM</p>
+                        <p class="card-text text-primary mb-0">Sarah Mitchell</p>
+                        <p class="card-text small text-muted" style="font-style: italic;">Project Manager, NexaSoft</p>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card h-100">
+                <div class="card shadow-sm border-0 h-100">
                     <div class="card-body">
-                        <p class="card-text" style="font-style: italic;">"Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Dolores sequi magni
-                            esse consequatur"</p>
+                        <p class="card-text" style="font-style: italic;">“Afif designed a responsive and visually
+                            polished interface with a strong focus on usability and performance. His professional
+                            attitude, development workflow, and attention to user experience made the project highly
+                            successful.”</p>
                         <hr>
-                        <p class="card-text text-primary mb-0">John Doe</p>
-                        <p class="card-text small text-muted" style="font-style: italic;">CEO, Figma</p>
+                        <p class="card-text text-primary mb-0">Michael Rodriguez</p>
+                        <p class="card-text small text-muted" style="font-style: italic;">UI/UX Consultant, Figma</p>
                     </div>
                 </div>
             </div>
@@ -225,11 +250,12 @@
         <div class="container">
             <p id="datetime" class="text-center text-muted small m-0"></p>
             <hr class="text-center text-muted m-1">
-            <p class="text-center text-muted small m-0">&copy; Afif ahnaf 2026. All rights asre reserved!</p>
+            <p class="text-center text-muted small m-0">&copy; Afif Ahnaf 2026. All rights are reserved!</p>
         </div>
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/typing-animation.js"></script>
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
