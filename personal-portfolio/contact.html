@@ -48,17 +48,36 @@
 
     <!-- Contact Me -->
     <section class="container my-5">
-        <h2 class="text-center mb-4">Contact Me</h2>
+        <h2 class="text-center fw-bold mb-5">Contact Me</h2>
+
         <div class="d-flex flex-column flex-md-row gap-4">
-            <div class="card w-100">
-                <div class="card-body">
+            <!-- Contact Information -->
+            <div class="card w-100 border-0 shadow-sm">
+                <div class="card-body p-4">
                     <h5 class="card-title text-primary">Address</h5>
-                    <p class="card-text">311, Tuba Jamilla, Sangrami Sarani, Moddho Azampur, Dhaka</p>
+                    <p class="card-text text-secondary">
+                        House 12, Road 7, Uttara Business District,
+                        Dhaka, Bangladesh
+                    </p>
+
                     <h5 class="card-title text-primary">Phone Number</h5>
-                    <p class="card-text">+880 1521-742608 <br>+880 1621-965886</p>
+                    <p class="card-text text-secondary">
+                        +880 1700-123456<br>
+                        +880 1900-654321
+                    </p>
+
                     <h5 class="card-title text-primary">Email</h5>
-                    <p class="card-text">golamafifahnaf@gmail.com</p>
-                    <div class="ratio ratio-16x9">
+                    <p class="card-text text-secondary">
+                        contact@afifahnaf.dev
+                    </p>
+
+                    <h5 class="card-title text-primary">Availability</h5>
+                    <p class="card-text text-secondary">
+                        Available for freelance projects,
+                        collaborations, and frontend development opportunities.
+                    </p>
+                    
+                    <div class="ratio ratio-16x9 rounded overflow-hidden">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d139500.8122823826!2d90.33728801744914!3d23.7809757283424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b087026b81%3A0x8fa563bbdd5904c2!2sDhaka!5e1!3m2!1sen!2sbd!4v1777878264993!5m2!1sen!2sbd"
                             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
@@ -66,15 +85,17 @@
                     </div>
                 </div>
             </div>
-            <div class="card w-100">
-                <form id="form" class="card-body">
+
+            <!-- Contact Form -->
+            <div class="card w-100 border-0 shadow-sm">
+                <form id="form" class="card-body p-4">
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Name</label>
                         <input id="name" type="text" class="form-control" id="exampleFormControlInput1"
                             placeholder="John Doe">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <label for="exampleFormControlInput1" class="form-label">Email Address</label>
                         <input id="email" type="email" class="form-control" id="exampleFormControlInput1"
                             placeholder="name@example.com">
                     </div>
@@ -90,9 +111,12 @@
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-                        <textarea id="msg" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <textarea id="msg" class="form-control" id="exampleFormControlTextarea1" rows="5"
+                            placeholder="Write your message here..."></textarea>
                     </div>
-                    <div class="text-end"><button id="submit" class="btn btn-primary" type="submit">Send Message</button></div>
+                    <div class="text-end">
+                        <button id="submit" class="btn btn-primary px-4" type="submit">Send Message</button>
+                    </div>
                 </form>
             </div>
         </div>
@@ -104,7 +128,7 @@
         <div class="container">
             <p id="datetime" class="text-center text-muted small m-0"></p>
             <hr class="text-center text-muted m-1">
-            <p class="text-center text-muted small m-0">&copy; Afif ahnaf 2026. All rights asre reserved!</p>
+            <p class="text-center text-muted small m-0">&copy; Afif Ahnaf 2026. All rights are reserved!</p>
         </div>
     </footer>
 

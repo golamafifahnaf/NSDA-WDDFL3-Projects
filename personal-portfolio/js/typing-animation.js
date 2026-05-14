@@ -1,61 +1,36 @@
 const typingText = document.getElementById('typing-text');
-
-const roles = [
-    'Web Developer',
-    'Software Engineer',
-    'Cyber Security Expert'
-];
+const roles = ['Web Developer', 'Software Engineer', 'Cyber Security Expert'];
 
 let roleIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
 
-function typeEffect(){
-
+function typeEffect() {
     const currentRole = roles[roleIndex];
 
-    if (!isDeleting){
-
-        typingText.textContent =
-            currentRole.substring(0, charIndex + 1);
-
+    if (!isDeleting) {
+        typingText.textContent = currentRole.substring(0, charIndex + 1);
         charIndex++;
 
-        if (charIndex === currentRole.length){
-
+        if (charIndex === currentRole.length) {
             isDeleting = true;
-
             setTimeout(typeEffect, 1500);
-
             return;
-
         }
-
     }
-
-    else{
-
-        typingText.textContent =
-            currentRole.substring(0, charIndex - 1);
-
+    else {
+        typingText.textContent = currentRole.substring(0, charIndex - 1);
         charIndex--;
 
-        if (charIndex === 0){
-
+        if (charIndex === 0) {
             isDeleting = false;
-
             roleIndex++;
 
-            if (roleIndex === roles.length){
-                roleIndex = 0;
-            }
-
+            if (roleIndex === roles.length) roleIndex = 0;
         }
-
     }
 
     setTimeout(typeEffect, isDeleting ? 50 : 100);
-
 }
 
 typeEffect();

@@ -55,8 +55,7 @@ function updateDateTime() {
             second: '2-digit'
         };
 
-        datetime.innerText =
-            now.toLocaleString('en-US', options);
+        datetime.innerText = now.toLocaleString('en-US', options);
     }
 }
 
