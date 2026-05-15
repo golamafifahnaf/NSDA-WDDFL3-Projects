@@ -1,0 +1,11 @@
+.carousel,
+.carousel-inner,
+.carousel-item{
+    height: 100vh;
+}
+
+.hero-carousel-image{
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
