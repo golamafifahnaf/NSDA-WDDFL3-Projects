@@ -1,3 +1,7 @@
+body {
+    scroll-behavior: smooth;
+}
+
 .text {
     text-align: justify;
 }

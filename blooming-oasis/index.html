@@ -14,9 +14,9 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-success sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Blooming Oasis</a>
+            <a class="navbar-brand fw-bold" href="index.html">Blooming Oasis</a>
             <button class="navbar-toggler text" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -40,133 +40,172 @@
         </div>
     </nav>
 
+    <section class="position-relative vh-100 overflow-hidden">
+        <img src="img/hero.jpg" class="w-100 vh-100" style="object-fit: cover;" alt="">
+
+        <!-- Dark Overlay -->
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+
+        <div class="position-absolute top-50 start-50 translate-middle w-100 px-3">
+            <div class="container">
+                <div class="rounded-4 shadow-sm p-4 p-md-5 text-center mx-auto" style="max-width: 700px;">
+
+                    <h1 class="text-white display-3 fw-bold mb-4">
+                        Welcome to<br>the universe of<br>Blooming Oasis
+                    </h1>
+
+                    <a href="#matchmaker" class="btn btn-success fw-bold px-4 py-2">
+                        Choose a Plant
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Main Body -->
     <div class="container mt-5">
 
         <!-- Plant Matchmaker -->
-        <section class="card text-center mb-5">
-            <div class="card-header bg-success text-white">
-                Plant Matchmaker
+        <section id="matchmaker" class="container my-5" style="scroll-margin-top: 100px;">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold">Plant Matchmaker</h2>
+                <p class="text-muted">Find the perfect plant based on your lifestyle and preferences.</p>
             </div>
-            <div class="card-body">
-                <h5 class="card-title">Choose based on your preferrence</h5>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
-                        <h6 class="text-start">Sunlight</h6>
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected class="text-muted">Please select a value</option>
-                            <option value="1">Low</option>
-                            <option value="2">Medium</option>
-                            <option value="3">High</option>
-                        </select>
-                    </li>
-                    <li class="list-group-item">
-                        <h6 class="text-start">Care Level</h6>
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected class="text-muted">Please select a value</option>
-                            <option value="1">Low</option>
-                            <option value="2">Medium</option>
-                            <option value="3">High</option>
-                        </select>
-                    </li>
-                    <li class="list-group-item">
-                        <h6 class="text-start">Pet Friendliness</h6>
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected class="text-muted">Please select a value</option>
-                            <option value="1">Low</option>
-                            <option value="2">Medium</option>
-                            <option value="3">High</option>
-                        </select>
-                    </li>
-                </ul>
-
-            </div>
-            <div class="card-footer text-muted">
-                <a href="#" class="btn btn-success">See Result</a>
+            <div class="card border-0 shadow-sm rounded-4">
+                <div class="card-body p-4">
+                    <div class="row g-4">
+                        <!-- Sunlight -->
+                        <div class="col-md-4">
+                            <label class="form-label fw-semibold">Sunlight</label>
+                            <select class="form-select" id="sunlight">
+                                <option value="" selected disabled>Select sunlight level</option>
+                                <option value="low">Low Light</option>
+                                <option value="medium">Medium Light</option>
+                                <option value="high">Bright Light</option>
+                            </select>
+                        </div>
+                        <!-- Care Level -->
+                        <div class="col-md-4">
+                            <label class="form-label fw-semibold">Care Level</label>
+                            <select class="form-select" id="care">
+                                <option value="" selected disabled>Select care level</option>
+                                <option value="easy">Easy</option>
+                                <option value="moderate">Moderate</option>
+                                <option value="advanced">Advanced</option>
+                            </select>
+                        </div>
+                        <!-- Pet Friendly -->
+                        <div class="col-md-4">
+                            <label class="form-label fw-semibold">Pet Friendliness</label>
+                            <select class="form-select" id="pet">
+                                <option value="" selected disabled>Select preference</option>
+                                <option value="yes">Pet Friendly</option>
+                                <option value="no">Not Important</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <button class="btn btn-success px-4" onclick="matchPlant()">Find My Plant</button>
+                    </div>
+                    <!-- Result -->
+                    <div id="result" class="alert alert-success text-center mt-4 d-none"></div>
+                </div>
             </div>
         </section>
 
         <!-- Plants Gallery -->
         <section id="carouselExampleInterval" class="carousel slide mb-5" data-bs-ride="carousel">
-            <h2 class="text-center mb-3">Photo Gallery</h2>
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="2000">
-                    <img src="img/bloom-1.webp" class="d-block w-100" style="height: 450px;" alt="...">
-                </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                    <img src="img/bloom-2.jfif" class="d-block w-100" style="height: 450px;" alt="...">
-                </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                    <img src="img/bloom-3.webp" class="d-block w-100" style="height: 450px;" alt="...">
-                </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                    <img src="img/bloom-4.webp" class="d-block w-100" style="height: 450px;" alt="...">
-                </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                    <img src="img/bloom-5.jpg" class="d-block w-100" style="height: 450px;" alt="...">
-                </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                    <img src="img/bloom-6.jpg" class="d-block w-100" style="height: 450px;" alt="...">
-                </div>
+            <div class="text-center mb-4">
+                <h2 class="fw-bold">Photo Gallery</h2>
+                <p class="text-muted mb-0">Explore vibrant indoor plants and lush botanical beauty.</p>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+
+            <div class="position-relative">
+                <div class="carousel-inner rounded-4 shadow-sm overflow-hidden">
+                    <div class="carousel-item active" data-bs-interval="3500">
+                        <img src="img/gallery-1.jpg" class="d-block img-fluid w-100"
+                            style="height: 500px; object-fit: cover;" alt="Plant Gallery Image">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3500">
+                        <img src="img/gallery-2.jpg" class="d-block img-fluid w-100"
+                            style="height: 500px; object-fit: cover;" alt="Plant Gallery Image">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3500">
+                        <img src="img/gallery-3.jpg" class="d-block img-fluid w-100"
+                            style="height: 500px; object-fit: cover;" alt="Plant Gallery Image">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </section>
 
         <!-- Popular Houseplants -->
         <section class="mb-5">
-            <h2 class="text-center mb-3">Popular Houseplants</h2>
+            <div class="text-center mb-4">
+                <h2 class="fw-bold">Popular Houseplants</h2>
+                <p class="text-muted mb-0">Discover our most loved indoor plants for every space.</p>
+            </div>
 
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="card h-100">
-                        <img src="img/bloom-2.jfif" class="card-img-top" alt="...">
+                    <div class="card shadow-sm border-0 h-100 rounded-4 overflow-hidden">
+                        <img src="img/plant-2.jpg" class="card-img-top img-fluid"
+                            style="height: 250px; object-fit: cover;" alt="">
                         <div class="card-body">
-                            <h5 class="card-title">Plant 1</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's
-                                content.</p>
-                        </div>
-                        <div class="card-body">
-                            <a href="#" class="btn btn-success">See More</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <img src="img/bloom-2.jfif" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Plant 2</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's
-                                content.</p>
-                        </div>
-                        <div class="card-body">
-                            <a href="#" class="btn btn-success">See More</a>
+                            <h5 class="card-title">Snake Plant</h5>
+                            <p class="card-text text-muted text-truncate">
+                                A hardy indoor plant perfect for beginners and modern interiors.
+                            </p>
+                            <h4 class="text-success fw-bold mb-3">$99</h4>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-success rounded-3">Buy Now</button>
+                                <button onclick="alert('Monstera Deliciosa added to cart Successfully')" class="btn btn-outline-success rounded-3">Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-4">
-                    <div class="card h-100">
-                        <img src="img/bloom-2.jfif" class="card-img-top" alt="...">
+                    <div class="card shadow-sm border-0 h-100 rounded-4 overflow-hidden">
+                        <img src="img/plant-1.jpg" class="card-img-top img-fluid"
+                            style="height: 250px; object-fit: cover;" alt="">
                         <div class="card-body">
-                            <h5 class="card-title">Plant 3</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's
-                                content.</p>
+                            <h5 class="card-title">Monstera Deliciosa</h5>
+                            <p class="card-text text-muted text-truncate">
+                                A tropical favorite known for its large decorative leaves.
+                            </p>
+                            <h4 class="text-success fw-bold mb-3">$129</h4>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-success rounded-3">Buy Now</button>
+                                <button onclick="alert('Monstera Deliciosa added to cart Successfully')" class="btn btn-outline-success rounded-3">Add to Cart</button>
+                            </div>
                         </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow-sm border-0 h-100 rounded-4 overflow-hidden">
+                        <img src="img/plant-3.jpg" class="card-img-top img-fluid"
+                            style="height: 250px; object-fit: cover;" alt="">
                         <div class="card-body">
-                            <a href="#" class="btn btn-success">See More</a>
+                            <h5 class="card-title">Peace Lily</h5>
+                            <p class="card-text text-muted text-truncate">
+                                An elegant flowering plant that improves indoor air quality.
+                            </p>
+                            <h4 class="text-success fw-bold mb-3">$89</h4>
+                            <div class="d-grid gap-2">
+                                <a href="#" class="btn btn-success rounded-3">Buy Now</a>
+                                <a onclick="alert('Monstera Deliciosa added to cart Successfully')" class="btn btn-outline-success rounded-3">Add to Cart</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -175,50 +214,50 @@
 
         <!-- Curated Collection -->
         <section class="mb-5">
-            <h2 class="text-center mb-3">Curated Collection</h2>
+            <div class="text-center mb-4">
+                <h2 class="fw-bold">Curated Collection</h2>
+                <p class="text-muted mb-0">Specially selected plant sets for different lifestyles.</p>
+            </div>
 
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="card h-100">
-                        <img src="img/bloom-2.jfif" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Collection 1</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's
-                                content.</p>
-                        </div>
-                        <div class="card-body">
-                            <a href="#" class="btn btn-success">See More</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <img src="img/bloom-2.jfif" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Collection 2</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's
-                                content.</p>
-                        </div>
-                        <div class="card-body">
-                            <a href="#" class="btn btn-success">See More</a>
+                    <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                        <img src="img/gallery-1.jpg" class="card-img-top" style="height: 250px; object-fit: cover;"
+                            alt="">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title text-truncate">Beginner Friendly Set</h5>
+                            <p class="card-text text-muted">
+                                A low-maintenance collection perfect for first-time plant owners.
+                            </p>
+                            <a href="#" class="btn btn-success rounded-3">See More</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-4">
-                    <div class="card h-100">
-                        <img src="img/bloom-2.jfif" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Collection 3</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's
-                                content.</p>
+                    <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                        <img src="img/gallery-2.jpg" class="card-img-top" style="height: 250px; object-fit: cover;"
+                            alt="">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title text-truncate">Pet Safe Collection</h5>
+                            <p class="card-text text-muted">
+                                Beautiful indoor plants carefully selected for pet-friendly homes.
+                            </p>
+                            <a href="#" class="btn btn-success rounded-3">See More</a>
                         </div>
-                        <div class="card-body">
-                            <a href="#" class="btn btn-success">See More</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                        <img src="img/gallery-3.jpg" class="card-img-top" style="height: 250px; object-fit: cover;"
+                            alt="">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Low Light Bundle</h5>
+                            <p class="card-text text-muted">
+                                Ideal plants for apartments and rooms with limited sunlight.
+                            </p>
+                            <a href="#" class="btn btn-success rounded-3">See More</a>
                         </div>
                     </div>
                 </div>
@@ -227,50 +266,53 @@
 
         <!-- Plant Care Guides -->
         <section class="mb-5">
-            <h2 class="text-center mb-3">Plant Care Guides</h2>
+            <div class="text-center mb-4">
+                <h2 class="fw-bold">Plant Care Guides</h2>
+                <p class="text-muted mb-0">Simple tips and guides for healthy indoor plants.</p>
+            </div>
 
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="card h-100">
-                        <img src="img/bloom-2.jfif" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Guide 1</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's
-                                content.</p>
-                        </div>
-                        <div class="card-body">
-                            <a href="#" class="btn btn-success">See More</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <img src="img/bloom-2.jfif" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Guide 2</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's
-                                content.</p>
-                        </div>
-                        <div class="card-body">
-                            <a href="#" class="btn btn-success">See More</a>
+                    <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                        <img src="img/guide-1.jpg" class="card-img-top" style="height: 250px; object-fit: cover;"
+                            alt="">
+                        <div class="card-body d-flex flex-column">
+                            <p class="small text-success fw-semibold mb-2">5 Min Read</p>
+                            <h5 class="card-title">How Often Should You Water Indoor Plants?</h5>
+                            <p class="card-text text-muted text">
+                                Learn simple watering techniques to keep your plants healthy and thriving.
+                            </p>
+                            <a href="#" class="btn btn-success rounded-3 mt-auto">Read Guide</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-4">
-                    <div class="card h-100">
-                        <img src="img/bloom-2.jfif" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Guide 3</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's
-                                content.</p>
+                    <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                        <img src="img/guide-2.jpg" class="card-img-top" style="height: 250px; object-fit: cover;"
+                            alt="">
+                        <div class="card-body d-flex flex-column">
+                            <p class="small text-success fw-semibold mb-2">4 Min Read</p>
+                            <h5 class="card-title">Best Plants for Small Apartments</h5>
+                            <p class="card-text text-muted">
+                                Discover compact and stylish plants perfect for limited indoor spaces.
+                            </p>
+                            <a href="#" class="btn btn-success mt-auto">Read Guide</a>
                         </div>
-                        <div class="card-body">
-                            <a href="#" class="btn btn-success">See More</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                        <img src="img/guide-3.jpg" class="card-img-top" style="height: 250px; object-fit: cover;"
+                            alt="">
+                        <div class="card-body d-flex flex-column">
+                            <p class="small text-success fw-semibold mb-2">6 Min Read</p>
+                            <h5 class="card-title">Understanding Plant Sunlight Needs</h5>
+                            <p class="card-text text-muted">
+                                A beginner-friendly guide to choosing the right lighting conditions.
+                            </p>
+                            <a href="#" class="btn btn-success mt-auto">Read Guide</a>
                         </div>
                     </div>
                 </div>
@@ -279,48 +321,57 @@
 
         <!-- About -->
         <section class="mb-5">
-            <h2 class="text-center mb-3">About Blooming Oasis</h2>
-            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quia quae itaque,
-                pariatur aliquam dolores minima veniam eaque. Dolores pariatur distinctio minima dolor facere rem
-                maiores vero, eum ea velit.
-                Labore eaque nobis repellat dicta eligendi aliquam alias dolore assumenda obcaecati architecto vel vitae
-                magnam qui, officiis odio id molestias saepe? Sint quasi ab laudantium voluptatem accusamus architecto,
-                eos magnam.
-                Modi deserunt ducimus quos reiciendis sunt dignissimos necessitatibus commodi incidunt, nam repudiandae
-                perspiciatis cupiditate ex porro molestiae, eaque autem iusto nemo quam sequi! Culpa assumenda ex,
-                doloribus eaque ratione non.
-                Vitae dolorum, perferendis laborum provident recusandae fugiat, consequatur eos quae natus doloremque
-                debitis quam sunt? Aliquam eos perferendis voluptatem rem eius architecto quae tempora harum corporis!
-                Quibusdam quam necessitatibus fugiat!
-                Blanditiis voluptatum placeat aliquam pariatur, ab expedita debitis explicabo ducimus vero voluptate
-                tempore repellat aperiam saepe accusantium harum nulla vel possimus, corrupti sit adipisci et fuga rerum
-                earum facere? Exercitationem?
-                Sunt facere consequatur molestiae, quidem obcaecati quibusdam quia? Quod velit eligendi repudiandae
-                dolorum doloribus dignissimos neque quibusdam magnam deleniti excepturi nihil adipisci, ex impedit
-                ratione. Porro inventore asperiores dolorem assumenda.
-                Suscipit illum vitae asperiores, sunt illo quis explicabo odit ex repudiandae veritatis aut. Eos, harum!
-                Velit, animi libero quo, cupiditate tenetur esse fugit ducimus cumque aperiam aut perferendis suscipit
-                dicta.
-                Sapiente perferendis commodi, tempora deleniti voluptatum odio, provident quos blanditiis nisi quisquam,
-                cumque praesentium! Consequatur fugiat aut dolores cum, dicta quibusdam repellendus minima
-                exercitationem, minus tempora debitis ullam illum quae.
-                Reiciendis laboriosam a tempore perspiciatis nesciunt adipisci magni ex distinctio ad? Vel quibusdam
-                consequatur exercitationem dolor quo voluptates ad dolores architecto facere commodi quaerat voluptatum
-                tempora, quos rem. Officiis, soluta.
-                Fugiat sit ex quibusdam quae accusamus dolorem accusantium eligendi saepe impedit harum eos ullam quis,
-                quia possimus quo alias! Mollitia unde sint non nemo, quae blanditiis numquam itaque illo sapiente.</p>
+            <h2 class="text-center fw-bold mb-4">About Blooming Oasis</h2>
+            <p class="text-muted text-center">
+                Blooming Oasis is a modern houseplant shop dedicated to helping people create greener, healthier, and
+                more relaxing living spaces through carefully selected indoor plants and botanical collections. We
+                believe that plants not only enhance the beauty of a space but also improve mood, productivity, and
+                overall well-being. Our collection includes a wide variety of indoor plants suitable for homes,
+                apartments, offices, and commercial environments, making plant ownership accessible for everyone from
+                beginners to experienced plant lovers. Alongside our carefully curated plant selections, we also provide
+                themed plant collections, simple plant care guides, and personalized recommendations to help customers
+                confidently care for their plants. At Blooming Oasis, our mission is to make plant care easy, enjoyable,
+                and inspiring while encouraging people to build a stronger connection with nature in their everyday
+                lives.
+            </p>
+
+            <div class="row g-3 mt-4">
+                <div class="col-6">
+                    <div class="card border-0 shadow-sm rounded-4 text-center h-100">
+                        <div class="card-body">
+                            <h3 class="fw-bold text-success">500+</h3>
+                            <p class="mb-0 text-muted">Happy Customers</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="card border-0 shadow-sm rounded-4 text-center h-100">
+                        <div class="card-body">
+                            <h3 class="fw-bold text-success">100+</h3>
+                            <p class="mb-0 text-muted">Plant Varieties</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
 
     <!-- Footer -->
-    <footer class="footer container">
-        <hr class="mb-2">
-        <p class="text-center small mb-2">&copy; Blooming Oasis 2026. All rights are reserved.</p>
+    <footer class="bg-success py-3 mt-auto">
+        <div class="container">
+            <p id="datetime" class="text-center text-white small m-0"></p>
+            <hr class="text-center text-white m-1">
+            <p class="text-center text-white small m-0">&copy; Blooming 2026. All rights are reserved!</p>
+        </div>
     </footer>
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
     </script>
+
+<script src="js/plant-matchmaker.js"></script>
+<script src="js/date-time.js"></script>
 
 </html>
